@@ -1,0 +1,183 @@
+@charset "utf-8";
+body,header,div,section,img,form,ul,li,h1,h2,h3,p,span,address,strong,footer,input,button,figure,figcaption{
+  margin: 0px; padding: 0px;
+}
+li{list-style: none;}
+a{text-decoration: none; color: #222;}
+address{font-style:normal;}
+img{display: block;}
+body{
+  height: auto; font-size: 20px; font-family: "Roboto","맑은 고딕","Malgun Gothic",sans-serif; 
+}
+
+/* ---------  media query ------------ */
+@media screen and ( min-width:641px ){
+	.desktop{display:block;}
+	.tablet, .mobile{ display:none;}
+
+  #main_header{
+    width: 100%; height: 100px; border-top: 8px solid #d8311a;
+    border-bottom: 1px solid #ccc;
+  }
+  #main_header>.innerbox{
+    width: 1340px; height: 100px; margin: 0px auto;
+  }
+  #main_header>.innerbox>h1{
+    float: left; width: 297px; height: 36px; margin-top: 32px;
+  
+  }
+  #main_header>.innerbox>h1>a{
+    display: block; width: 297px; height: 36px;
+  }
+  #main_header>.innerbox>.menu_btn{
+    display: none;
+  }
+  #main_header>.innerbox>.gnb{
+    float: right;   position:relative; z-index:1000;
+  }
+  #main_header>.innerbox>.gnb>ul>li{
+    float: left; height: 100px; width: 160px;  position:relative;
+  }
+  #main_header>.innerbox>.gnb>ul>li>a{
+    clear: both; display: block; font-size: 24px; line-height: 100px;
+    text-align: center; height: 100px; width: 160px;   font-weight:bold;
+  }
+  #main_header>.innerbox>.gnb>ul>li>.sub{
+    text-align: center; font-size: 16px; padding-top: 14px;
+    display: none; position: absolute; z-index: 999;  left:0px;  top:100px;
+    height: 206px; width: 160px; text-align: center;
+  }
+  #main_header>.innerbox>.gnb>ul>li>.sub>li{
+    width: 140px; margin-bottom: 14px; 
+  }
+  #main_header>.innerbox>.gnb>ul>li>.sub>li>a{
+    display: block; width: 160px; color: #fff; transition: all 0.4s;
+    
+  }
+  #main_header>.innerbox>.gnb>ul>li>.sub>li>a:hover{
+    color: #d73119;
+  }
+  #main_header>.innerbox>.sub_bg{
+    width: 100%; height: 220px; background: rgba(0,0,0,0.5);
+    opacity: 0; position: absolute; top: 108px; left: 0px;
+    transition: all 0.4s;
+  }
+  #main_header>.innerbox>.gnb>ul>li:hover{
+    border-bottom: 4px solid #c22f1a; box-sizing: border-box;
+  }
+  #main_header>.innerbox>.gnb:hover .sub{display: block;}
+  #main_header>.innerbox>.gnb:hover+.sub_bg{opacity: 1; z-index: 999;}
+
+  /*---------------------------main container--------------------------*/
+  #main_container{
+    width: 100%; height: auto; margin: 0 auto;
+  }
+  #main_container a, p{
+    font-family: "나눔 고딕","Nanum Gothic",sans-serif;
+  }
+  #main_container p{
+    color: #717272;
+  }
+  #main_container>.content_header{
+    width: 100%; background: #fffcf6;
+  }
+  #main_container>.content_header>.subtilte{
+    padding: 80px 0px; padding-left:10%; 
+  }
+  #main_container>.content_header>.subtilte>h2{
+    color: #412210; font-size: 42px; margin-bottom: 16px;
+  }
+  #main_container>.content_header>.subtilte>h2>span{
+    display: block; font-size: 22px;
+  }
+  #main_container>.content_header>.subtilte>p{
+    font-size: 18px;
+  }
+  #main_container>.content_header>.nav{
+    margin: 0 auto; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
+    background: #fff; padding: 0px 10%;
+  }
+  #main_container>.content_header>.nav>ul{
+    text-align: center; margin: 0 auto; height: 60px; width: 100%;
+  }
+  #main_container>.content_header>.nav>ul>li{
+    display: inline-block; height: 60px; width: 24%;
+  }
+  #main_container>.content_header>.nav>ul>li:nth-child(1){border-bottom: 4px solid #d8311a;}
+  #main_container>.content_header>.nav>ul>li>a{
+    display: block; height: 60px; line-height: 60px;
+    /* border-bottom: 4px solid #c22f1a; */
+  }
+  #main_container>.main_content{
+    width: 100%; height: 500px; text-align: center; line-height: 500px; font-size: 30px;
+  }
+
+
+
+  
+  /*------------------------footer---------------------------*/
+  #main_footer{
+    background: #ccc;
+    padding: 20px 0px 40px; font-size: 12px; box-sizing: border-box;
+  }
+  #main_footer>.innerbox{
+    width: 1340px; margin: 0px auto; box-sizing: border-box;
+  }
+  #main_footer>.innerbox>.footer_main{
+    width: 1340px; box-sizing: border-box;  padding-top:20px;  overflow:hidden;
+    /*padding-right: 30px;*/
+    /*background: url(../images/footercenter_line.png) no-repeat right center;*/
+  }
+  #main_footer>.innerbox>.footer_main>h3{
+    float: left; margin-right:45px;
+  }
+  #main_footer>.innerbox>.footer_main>h3>img{
+    width: 66px; height: 77px;
+  }
+  #main_footer>.innerbox>.footer_main>ul.footer_menu{
+     margin-bottom: 8px; overflow: hidden;  float:left;
+  }
+  #main_footer>.innerbox>.footer_main>ul.footer_menu>li{
+    float: left; margin-right: 10px; font-size: 16px;
+    font-weight: bold; padding-right: 11px;
+    background: url(../images/footer_line.png) no-repeat right center;
+  }
+  #main_footer>.innerbox>.footer_main>ul.footer_menu>li:last-child{
+    background: none;
+  }
+  #main_footer>.innerbox>.footer_main>.sns{
+    float: right; 
+  }
+  #main_footer>.innerbox>.footer_main>.sns>ul>li{
+    width: 39px; height: 38px; float: left; margin-right: 15px;
+  }
+  #main_footer>.innerbox>.footer_main>.sns>ul>li>a{
+    display: block; width: 39px; height: 38px;
+    background: url(../images/facebook.png) no-repeat center center;
+    background-size: cover; text-indent: -9999px;
+  }
+  #main_footer>.innerbox>.footer_main>.sns>ul>li:nth-child(2)>a{
+    background: url(../images/instagram.png) no-repeat center center;
+    background-size: cover;
+  }
+  #main_footer>.innerbox>.footer_main>.sns>ul>li:nth-child(3)>a{
+    background: url(../images/naver_icon.png) no-repeat center center;
+    background-size: cover;
+  }
+  #main_footer>.innerbox>.footer_main>.address_box{
+     float:left;
+  }
+  #main_footer>.innerbox>.footer_main>.address_box>address{
+      overflow: hidden; font-size: 12px; letter-spacing: 1px;
+    line-height: 1.2em;
+  }
+  #main_footer>.innerbox>.footer_main>.address_box>p{
+    float: left; margin-right: 5px;
+  }
+  #main_footer>.innerbox>.footer_main>.address_box>p:last-child{
+    margin-right: 0px;
+  }
+  #main_footer>.innerbox>.footer_main>.address_box>p:last-of-type{
+    letter-spacing: 1px; line-height: 1.2em;
+  }
+}
